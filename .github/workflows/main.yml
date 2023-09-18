@@ -17,7 +17,7 @@ on:
    #   - submitted
 jobs:
   hello_world_job:
-    if: ${{ github.event.pull_request.merged }}
+   # if: ${{ github.event.pull_request.merged }}
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
