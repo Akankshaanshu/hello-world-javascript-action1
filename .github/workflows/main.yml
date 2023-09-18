@@ -1,18 +1,22 @@
 #on: [push]
 #on: [push]
-on:
-  push:
-    branches:
-      - staging
 #on:
- # pull_request:
-  #  branches: 
+ # push:
+  #  branches:
    #   - staging
-    #types: [closed]      
+on:
+  pull_request:
+    branches: 
+      - develop
+    types: [closed]      
       
-
+#on
+ # pull_request_review:
+  #  types:
+   #   - submitted
 jobs:
   hello_world_job:
+    if: ${{ github.event.pull_request.merged }}
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
