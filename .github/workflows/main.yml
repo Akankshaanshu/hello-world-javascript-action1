@@ -1,4 +1,15 @@
-on: [push]
+#on: [push]
+#on: [push]
+on:
+  push:
+    branches:
+      - staging
+#on:
+ # pull_request:
+  #  branches: 
+   #   - staging
+    #types: [closed]      
+      
 
 jobs:
   hello_world_job:
